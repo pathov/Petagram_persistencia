@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMascota"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    card_view:cardCornerRadius="@dimen/corner_radius_cv"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/cvImagen"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+
+            >
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+
+            >
+
+            <ImageButton
+                android:id="@+id/cvValoracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+               android:src="@drawable/hueso"
+                android:layout_weight="1"
+
+               ></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cvNombre"
+                android:text="NOMBRE"
+                android:textStyle="bold"
+                android:layout_weight="1"
+
+                />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cvTotal"
+                    android:text="10"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:gravity="end" />
+
+
+
+                <ImageView
+                    android:id="@+id/cvImagenTotal"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+
+                    android:src="@drawable/amarillo" />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    
+    
+    
+    
+    
+</androidx.cardview.widget.CardView>

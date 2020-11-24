@@ -1,0 +1,7 @@
+
+<resources>
+
+<dimen name="elevacion_actionbar">4dp</dimen>
+    <dimen name="padding_right_actionbar">20dp</dimen>
+    <dimen name="corner_radius_cv">4dp</dimen>
+</resources>
