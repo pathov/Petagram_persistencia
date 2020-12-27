@@ -1,14 +1,21 @@
 package com.example.petagram;
 
 public class Mascota {
+
+
+    private int id;
     private String Nombre;
     private Integer Foto;
-    private Integer Valoracion;
+    private Integer Valoracion=0;
 
     public Mascota(String nombre, Integer foto, Integer valoracion) {
         Nombre = nombre;
         Foto = foto;
         Valoracion = valoracion;
+    }
+
+    public Mascota() {
+
     }
 
     public void setNombre(String nombre) {
@@ -33,6 +40,14 @@ public class Mascota {
 
     public Integer getValoracion() {
         return Valoracion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 

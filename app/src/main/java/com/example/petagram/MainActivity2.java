@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.example.petagram.db.BaseDatos;
+
 import java.util.ArrayList;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -51,14 +53,14 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void inicializarListaMascota(){
         mascota =  new ArrayList<Mascota>();
-        mascota.add(new Mascota("Nube",R.drawable.nube,30));
-        mascota.add(new Mascota("Milan",R.drawable.milan,20));
-        mascota.add(new Mascota("Petunia",R.drawable.petunia,10));
-        mascota.add(new Mascota("Lluvia",R.drawable.lluvia,5));
 
-
-
-        mascota.add(new Mascota("Tequila",R.drawable.tequila,5));
+        BaseDatos db = new BaseDatos(this);
+        mascota=db.obtenerTop5Mascotas();
+       // mascota.add(new Mascota("Nube",R.drawable.nube,30));
+       // mascota.add(new Mascota("Milan",R.drawable.milan,20));
+       // mascota.add(new Mascota("Petunia",R.drawable.petunia,10));
+       // mascota.add(new Mascota("Lluvia",R.drawable.lluvia,5));
+       // mascota.add(new Mascota("Tequila",R.drawable.tequila,5));
 
 
 

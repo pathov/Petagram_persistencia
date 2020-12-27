@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.petagram.db.ConstructorMascotas;
+
 import java.util.ArrayList;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
@@ -51,11 +53,14 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         holder.cvValoracion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                like[0] = like[0]+1;
+                //like[0] = like[0]+1;
 
-                mascota.setValoracion(like[0]  );
-                holder.cvTotal.setText(mascota.getValoracion().toString());
+              //  mascota.setValoracion(like[0]  );
+               // holder.cvTotal.setText(mascota.getValoracion().toString());
+                ConstructorMascotas constructorMascotas= new ConstructorMascotas(activity);
+                constructorMascotas.darlike(mascota);
 
+                holder.cvTotal.setText(constructorMascotas.obtenerLikes(mascota));
 
                // Toast.makeText(activity,like[0].toString()  , Toast.LENGTH_SHORT).show();
             }
